@@ -12,6 +12,13 @@ public class Principal {
 
         System.out.println(funcionarios);
         System.out.println(funcionariosLetraA);
+
+        List<Double> valorVendas = List.of(500.0, 1800.0, 6200.0);
+
+        List<Double> comissao = valorVendas.stream().map(v -> v * 0.05).collect(Collectors.toUnmodifiableList());
+
+        System.out.println(valorVendas);
+        System.out.println(comissao);
     }
 }
 
