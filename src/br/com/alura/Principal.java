@@ -19,6 +19,9 @@ public class Principal {
 
         System.out.println(valorVendas);
         System.out.println(comissao);
+
+        double totalVendas = valorVendas.stream().reduce(0.0, Double::sum);
+        System.out.println("Total de vendas: " + totalVendas);
     }
 }
 
