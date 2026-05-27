@@ -1,9 +1,6 @@
 package br.com.alura;
 
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
+import java.util.*;
 
 public class Principal {
     static void main(String[] args) {
@@ -20,6 +17,13 @@ public class Principal {
         produtos.add("Água");
 
         System.out.println(produtos);
+
+        Map<Integer, String> clientes = new HashMap<>();
+        clientes.put(1, "Maria");
+        clientes.put(2, "Marcos");
+        clientes.put(3, "Ana");
+
+        System.out.println(clientes.get(1));
 
     }
 }
