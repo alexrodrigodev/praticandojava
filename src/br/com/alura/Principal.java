@@ -1,34 +1,19 @@
 package br.com.alura;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class Principal {
     static void main(String[] args) {
+        List<String> funcionarios = new ArrayList<>();
+        funcionarios.add("João");
+        funcionarios.add("Maria");
+        funcionarios.add("João");
 
+        System.out.println(funcionarios);
 
-        String texto = "Meu email é jacqueline@gmail.com";
-        Pattern pattern = Pattern.compile("\\w+@\\w+.\\w+");
-        Matcher matcher = pattern.matcher(texto);
-
-
-        if (matcher.find()) {
-            System.out.println(matcher.group());
-        }
-
-        System.out.println(formatarTelefone("2199887744"));
     }
-
-        public static String formatarTelefone(String telefone) {
-            String regex = "(\\d{2})(\\d{4,5})(\\d{4})";
-            Pattern pattern = Pattern.compile(regex);
-            Matcher matcher = pattern.matcher(telefone);
-
-            if (matcher.matches()) {
-                return String.format("(%s) %s-%s", matcher.group(1), matcher.group(2), matcher.group(3));
-            }
-
-            return "Número de telefone inválido!";
-        }
-    }
+}
 
